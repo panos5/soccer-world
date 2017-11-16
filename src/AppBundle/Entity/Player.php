@@ -24,7 +24,7 @@ class Player
     /**
      * @var string
      *
-     * @ORM\Column(name="firstName", type="string", length=255)
+     * @ORM\Column(name="first_name", type="string", length=255)
      */
     private $firstName;
 
@@ -59,7 +59,7 @@ class Player
     /**
      * @var int
      *
-     * @ORM\Column(name="shirtNumber", type="integer")
+     * @ORM\Column(name="shirt_number", type="integer")
      */
     private $shirtNumber;
 

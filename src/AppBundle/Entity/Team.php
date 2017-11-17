@@ -39,9 +39,10 @@ class Team
     /**
      * @var string
      *
-     * @ORM\Column(name="stadium", type="string", length=255, nullable=false)
+     * @ORM\OneToOne(targetEntity="Stadium")
+     * @ORM\JoinColumn(name="stadium_id", nullable=false, referencedColumnName="id")
      */
-    private $stadium;
+    private $stadiumId;
 
     /**
      * @var integer
@@ -107,17 +108,17 @@ class Team
     }
 
     /**
-     * @return string
+     * @return integer
      */
-    public function getStadium() {
-        return $this->stadium;
+    public function getStadiumId() {
+        return $this->stadiumId;
     }
 
     /**
-     * @param string $stadium
+     * @param string $stadiumId
      */
-    public function setStadium($stadium) {
-        $this->stadium = $stadium;
+    public function setStadium($stadiumId) {
+        $this->stadiumId = $stadiumId;
     }
 
     /**

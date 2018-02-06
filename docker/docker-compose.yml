@@ -1,0 +1,13 @@
+version: '2'
+services:
+  soccer-world:
+    build: .
+    image: mariolu/soccer-world
+    container_name: soccer-world-app
+    volumes:
+      - ../:/var/www/soccer-world/:rw,cached
+      - ~/.ssh/id_rsa:/root/.ssh/id_rsa:ro
+    ports:
+      - "8080:80"
+    environment:
+      - VIRTUAL_HOST=soccer-world.localtest.mes
